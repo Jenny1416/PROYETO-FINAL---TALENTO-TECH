@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyería Elegante - Tu tienda de joyas online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Joyería Elegante</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button id="search-btn">🔍</button>
+        </div>
+    </header>    
+
+    <nav>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#login">Iniciar Sesión</a></li>
+            <li><a href="#register">Registrarse</a></li>
+            <li><a href="orders.html">Mis ordenes</a></li> 
+        </ul>
+    </nav>
+
+    <!-- Nueva sección de categorías debajo del nav -->
+    <section id="categories">
+        <ul>
+            <li><a href="#all-products">Comprar todo</a></li>
+            <li><a href="#earrings">Aretes</a></li>
+            <li><a href="#rings">Anillos</a></li>
+            <li><a href="#bracelets">Pulseras</a></li>
+            <li><a href="#necklaces">Collares</a></li>
+            <li><a href="#watches">Relojes</a></li>
+        </ul>
+    </section>
+
+    <!-- Sección lateral de filtros -->
+    <aside id="filters">
+        <h3>Filtrar</h3>
+        <div class="filter-option">
+            <label for="category">Categoría:</label>
+            <select id="category" name="category">
+                <option value="all">Todos</option>
+                <option value="earrings">Aretes</option>
+                <option value="rings">Anillos</option>
+                <option value="bracelets">Pulseras</option>
+                <option value="necklaces">Collares</option>
+                <option value="watches">Relojes</option>
+            </select>
+        </div>
+
+        <div class="filter-option">
+            <label for="size">Tamaño:</label>
+            <select id="size" name="size">
+                <option value="all">Todos</option>
+                <option value="small">Pequeño</option>
+                <option value="medium">Mediano</option>
+                <option value="large">Grande</option>
+            </select>
+        </div>
+
+        <div class="filter-option">
+            <label for="color">Color:</label>
+            <select id="color" name="color">
+                <option value="all">Todos</option>
+                <option value="gold">Oro</option>
+                <option value="silver">Plata</option>
+                <option value="diamond">Diamante</option>
+            </select>
+        </div>
+
+        <div class="filter-option">
+            <label for="price">Precio:</label>
+            <input type="range" id="price" name="price" min="0" max="2000" step="50" value="2000">
+            <p>Hasta $<span id="price-value">2000</span></p>
+        </div>
+
+        <button id="apply-filters">Aplicar</button>
+    </aside>
+
+    <div id="cart-icon">🛒</div>
+    <div id="cart-panel">
+        <span id="close-cart-panel">X</span>
+        <h2>Carrito</h2>
+        <div id="cart-items"></div>
+        <div class="subtotal">Subtotal: $<span id="subtotal">0.00</span></div>
+        <button id="view-cart-btn" onclick="viewCart()">VER CARRITO</button>
+    </div>
+
+    <main id="main-content">
+        <!-- El contenido dinámico se cargará aquí -->
+    </main>
+</body>
+</html>
