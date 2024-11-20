@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <h1>Carrito de Compras</h1>
+    <ul>
+        {% for item in carrito %}
+            <li>{{ item.producto }} - {{ item.cantidad }} 
+                <a href="{{ url_for('eliminar_del_carrito', id=item.id) }}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('productos') }}">Seguir comprando</a>
+    <form action="{{ url_for('procesar_pago') }}" method="post">
+        <button type="submit">Procesar Pago</button>
+    </form>
+</body>
+</html>

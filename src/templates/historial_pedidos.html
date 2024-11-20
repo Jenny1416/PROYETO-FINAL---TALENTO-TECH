@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Pedidos</title>
+</head>
+<body>
+    <h1>Historial de Pedidos</h1>
+    <ul>
+        {% for pedido in pedidos %}
+            <li>{{ pedido.producto }} - {{ pedido.cantidad }} - {{ pedido.fecha }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('perfil') }}">Volver al perfil</a>
+</body>
+</html>
