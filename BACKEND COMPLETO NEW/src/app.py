@@ -144,6 +144,15 @@ def login():
             return 'Credenciales incorrectas, por favor intenta de nuevo.'
     return render_template('login.html')
 
+@app.route('/forgot_password', methods=['GET', 'POST'])
+def forgot_password():
+    if request.method == 'POST':
+        email = request.form['email']
+        # Aquí puedes implementar la lógica para enviar un correo de recuperación de contraseña
+        return 'Instrucciones enviadas a tu correo electrónico.'
+    return render_template('forgot_password.html')
+
+
 @app.route('/logout')
 def logout():
     session.pop('usuario_id', None)
