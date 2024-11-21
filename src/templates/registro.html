@@ -2,22 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ruta relativa al archivo CSS -->
+    <link rel="stylesheet" href="../css/styles-login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Favicon con ruta relativa -->
+    <link rel="icon" href="../img/favicon.ico.png" type="image/png">
+
+    <title>Registro de Usuario</title>
 </head>
 <body>
-    <h2>Registro de Usuario</h2>
-    <form method="POST" action="{{ url_for('registro') }}">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" required>
-        <br>
-        <button type="submit">Registrar</button>
-    </form>
-    <a href="{{ url_for('home') }}">Volver a la página principal</a>
+    <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <header>Registro de Usuario</header>
+            </div>
+
+            <!-- Formulario de registro -->
+            <form method="POST" action="{{ url_for('registro') }}">
+                <div class="input-field">
+                    <input type="text" id="nombre" name="nombre" class="input" placeholder="Nombre completo" required>
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" name="email" class="input" placeholder="Correo electrónico" required>
+                    <i class="bx bx-mail-send"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="contraseña" name="contraseña" class="input" placeholder="Contraseña" required>
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Registrar">
+                </div>
+            </form>
+
+            <!-- Enlace a la página principal -->
+            <div class="bottom">
+                <div class="left">
+                    <a href="{{ url_for('home') }}">Volver a la página principal</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

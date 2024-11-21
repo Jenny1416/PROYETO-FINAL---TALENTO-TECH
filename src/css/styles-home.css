@@ -1,0 +1,80 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h1, p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed; /* La barra de navegación se fija en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fa6e77d1; /* Fondo opaco */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    padding: 10px 20px;
+    z-index: 10; /* Asegura que la navbar esté encima de la sección */
+    transition: top 0.3s ease; /* Animación para el movimiento suave */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 8px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Mueve los enlaces más a la derecha */
+.navbar a:first-child {
+    margin-left: 30px;
+}
+
+.navbar a:hover {
+    color: #f39c12; /* Color al pasar el mouse */
+}
+
+.navbar-logo {
+    width: 40px; /* Tamaño del icono */
+    height: auto;
+}
+
+/* Imagen de fondo de la primera sección */
+.hero {
+    margin-top: 60px; /* Espacio suficiente para que la navbar no quede debajo */
+    background-image: url('../img/homeNiña.png'); /* Imagen de fondo */
+    background-size: cover;  
+    background-position: center center;  
+    background-attachment: fixed;  
+    height: 400px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
