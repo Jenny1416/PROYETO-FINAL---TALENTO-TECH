@@ -288,6 +288,10 @@ def confirmacion_pago():
     else:
         return redirect(url_for('home'))
 
+app = Flask(__name__)
+app.config['STATIC_FOLDER'] = 'static'  # Esto es opcional, ya que Flask usa 'static' por defecto
+
+
 # Inicio de la aplicación
 if __name__ == '__main__':
     app.run(debug=True)
